@@ -40,7 +40,7 @@ int main(void)
 			}
 			c2++;
 		}
-		c2++;
+		c++;
 	}
 	putchar('\n');
 
