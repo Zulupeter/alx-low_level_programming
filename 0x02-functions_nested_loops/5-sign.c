@@ -1,7 +1,9 @@
 #include "main.h"
 
+
 /**
  * print_sign - prints the sign of a njumber
+ * @n: number to check the sign of
  *
  * Return: 1 and prints '+' if n is greater than zero,
  * 0 and prints '0' if n is zero,
