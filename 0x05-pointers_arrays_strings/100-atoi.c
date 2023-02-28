@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _atoi - convert a string to an integer
+ * my_atoi - convert a string to an integer
  * @s: pointer to the string to convert
  *
- * Return: the converted integer
+ * Return: An integer
  */
-int _atoi(char *s)
+int my_atoi(char *s)
 
 {
 	int c = 0;
@@ -32,7 +32,9 @@ int _atoi(char *s)
 			c++;
 		}
 	}
+
 		ni *= min;
+
 
 		return (ni);
 }
