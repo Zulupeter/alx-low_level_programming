@@ -6,33 +6,33 @@
  *
  * Return: the converted integer
  */
-int _atoi(const char *s)
+int _atoi(char *s)
 
 {
-	int sign = 1, num = 0;
+	int c = 0;
+	unsigned int ni = 0;
+	int min = 1;
+	int isi = 0;
 
-	if (s == NULL)
-		return (0);
-	while (*s)
-
+	while (s[c])
 	{
-		if (*s == '-')
+		if (s[c] == 45)
 		{
-			sign *= -1;
+			min *= -1;
+			while (s[c] >= 48 && s[c] <= 57)
+			{
+				isi = 1;
+				ni = (ni * 10) + (s[c] - '0');
+				c++;
+			}
+			if (isi == 1)
+			{
+				break;
+			}
+			c++;
 		}
-		else if (*s >= '0' && *s <= '9')
-		{
-			if (num > INT_MAX / 10 || (num == INT_MAX / 10 && (*s - '0') > INT_MAX % 10))
-				return ((sign == 1) ? INT_MAX : INT_MIN);
-			num = num * 10 + (*s - '0');
-
-		}
-		else if (num > 0)
-		{
-			break;
-		}
-		s++;
 	}
+		ni *= min;
 
-		return (sign * num);
+		return (ni);
 }
