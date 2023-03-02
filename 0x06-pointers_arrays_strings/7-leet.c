@@ -1,97 +1,27 @@
 #include "main.h"
+
 /**
  * leet - encode into 1337speak
  * @n: input value
  * Return: n value
  */
 
-char *leet(char *str)
+char *leet(char *n)
+
 {
-	char leet_table[256] = {0};
 	int i, j;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-	const char *letters = "aAeEoOtTlL";
-	const char *leet_chars = "44330771";
-
-	for (i = 0; lestr)
+	for  (i = 0; n[i] != '\0'; i++)
 	{
-		char leet_table[256] = {0};
-		int i, j;
-
-		const char *letters = "aAeEoOtTlL";
-		const char *leet_chars = "44330771";
-
-		for (i = 0; letters[i] !=str)
+		for (j = 0; j < 10; j++)
 		{
-			char leet_table[256] = {0};
-			int i, j;
-
-			const char *letters = "aAeEoOtTlL";
-			const char *leet_chars = "44330771";
-
-			for (i = 0; letters[i] != '\0' && lestr)
+			if (n[i] == s1[j])
 			{
-				char leet_table[256] = {0};
-				int i, j;
-
-				const char *letters = "aAeEoOtTlL";
-				const char *leet_chars = "44330771";
-
-				for (i = 0; letters[i] != '\0' && leet_chars[i]str)
-				{
-					char leet_table[256] = {0};
-					int i, j;
-
-					const char *letters = "aAeEoOtTlL";
-					const char *leet_chars = "44330771";
-
-					for (i = 0; letters[i] != '\0' && leet_chars[i] != '\0'; istr)
-					{
-						char leet_table[256] = {0};
-						int i, j;
-
-						const char *letters = "aAeEoOtTlL";
-						const char *leet_chars = "44330771";
-
-						for (i = 0; letters[i] != '\0' && leet_chars[i] != '\0'; i++)
-						{str)
-							{
-								char leet_table[256] = {0};
-								int i, j;
-
-								const char *letters = "aAeEoOtTlL";
-								const char *leet_chars = "44330771";
-
-								for (i = 0; letters[i] != '\0' && leet_chars[i] != '\0'; i++)
-								{
-									leet_tablestr)
-									{
-										char leet_table[256] = {0};
-										int i, j;
-
-										const char *letters = "aAeEoOtTlL";
-										const char *leet_chars = "44330771";
-
-										for (i = 0; letters[i] != '\0' && leet_chars[i] != '\0'; i++)
-										{
-											leet_table[(int)letters[i]] str)
-											{
-												char leet_table[256] = {0};
-												int i, j;
-
-												const char *letters = "aAeEoOtTlL";
-												const char *leet_chars = "44330771";
-
-												for (i = 0; letters[i] != '\0' && leet_chars[i] != '\0'; i++)
-												{
-													leet_table[(int)letters[i]] = leet_chars[i];
-												}
-												for (i = 0; str[i] != '\0'; i++)
-													if (leet_table[(int)str[i]])
-													{
-														str[i] = leet_table[(int)str[i]];
-													}
-										
-
-												return (str);
-											}
+				n[i] = s2[i];
+			}
+		}
+	}
+	return (n);
+}
