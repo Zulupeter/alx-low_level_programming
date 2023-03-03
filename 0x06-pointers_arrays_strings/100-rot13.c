@@ -19,7 +19,7 @@ char *rot13(char *s)
 		{
 			if (s[i] == data1[j])
 			{
-				s[i] = data1[j];
+				s[i] = data2[j];
 				break;
 			}
 		}
