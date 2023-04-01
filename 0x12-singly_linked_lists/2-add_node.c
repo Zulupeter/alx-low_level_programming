@@ -4,27 +4,27 @@
 * of a list_t list.
 * @head: head of the linked list.
 * @str: string to store in the list.
-* Return: address of the head.
+* Return: pointer to the newly added node
 */
 
 list_t *add_node(list_t **head, const char *str)
 {
-list_t *new;
-size_t nchar;
+	list_t temp = malloc(sizeof(list_t));
 
-new = malloc(sizeof(list_t));
-if (new == NULL)
-return (NULL);
+	if (temp == NULL)
+		return (NULL);
+	temp->str = strdup(str);
+	temp->len = _strlen(str);
+	temp->next = NULL;
+	if (head == NULL)
 
-new->str = strdup(str);
-nchar = 0;
-
-while (str[nchar])
-nchar++;
-
-new->len = nchar;
-new->next = *head;
-*head = new;
-
-return (*head);
+	{
+		(*head)->next = temp;
+	}
+	else
+	{
+		temp->next = *head;
+		(*head) = temp;
+	}
+	return (temp);
 }
